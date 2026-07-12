@@ -1,0 +1,22 @@
+{
+  "name": "firstfintech-prestashop-playwright",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "allure:clean": "rm -rf allure-results allure-report",
+    "allure:generate": "allure generate ./allure-results --output ./allure-report",
+    "allure:open": "allure open ./allure-report",
+    "test:allure": "npm run allure:clean && playwright test && npm run allure:generate && npm run allure:open"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.5.0",
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^22.0.0",
+    "allure": "^3.14.2",
+    "allure-playwright": "^3.10.2",
+    "dotenv": "^16.6.1",
+    "typescript": "^5.8.3"
+  }
+}
